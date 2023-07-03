@@ -1,1 +1,1 @@
-# animalImageUrlAPI
+An api that gets a single image URL from google images.

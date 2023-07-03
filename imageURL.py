@@ -1,3 +1,6 @@
+# gets a single image url from the google images database
+# gets the cached data from the preloaded page
+
 from bs4 import BeautifulSoup
 import requests
 import smtplib
@@ -28,8 +31,12 @@ def get_image_url(animalName):
     return img_src
 
 #format of flask request on local server http://127.0.0.1:5000/?name={animalName}
+#format of flask request on production server https://animalimageapi.onrender.com/?name={animalName}
+
 @server.route('/')
 def send_data():
     animalName = request.args.get('name')
     image_url = get_image_url(animalName)
     return jsonify(result=image_url)
+
+# server.run()    run this command while testing, do not use in production

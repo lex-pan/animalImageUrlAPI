@@ -27,6 +27,7 @@ def get_image_url(animalName):
     img_src = image_html[0]['src']
     return img_src
 
+#format of flask request on local server http://127.0.0.1:5000/?name={animalName}
 @server.route('/')
 def send_data():
     animalName = request.args.get('name')

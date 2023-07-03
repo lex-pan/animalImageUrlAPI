@@ -33,5 +33,3 @@ def send_data():
     animalName = request.args.get('name')
     image_url = get_image_url(animalName)
     return jsonify(result=image_url)
-
-server.run()

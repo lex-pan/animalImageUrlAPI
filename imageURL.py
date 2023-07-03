@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import requests
 import smtplib
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 def generate_search_url(animalName):
     url_template = "https://www.google.com/search?q={}&tbm=isch"
@@ -12,6 +13,7 @@ def generate_search_url(animalName):
     return url
 
 server = Flask("retrieve image url")
+CORS(server)
     
 #extracting the html from the page
 def get_image_url(animalName):

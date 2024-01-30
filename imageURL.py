@@ -40,4 +40,4 @@ def send_data():
     image_url = get_image_url(animalName)
     return jsonify(result=image_url)
 
-server.run()   # run this command while testing, do not use in production
+#server.run()   # run this command while testing, do not use in production

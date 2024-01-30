@@ -23,9 +23,8 @@ def get_image_url(animalName):
 
     #converts the response into html 
     soup = BeautifulSoup(response.text, "html.parser")
-
     # name of class with image link
-    image_class = "yWs4tf"
+    image_class = "DS1iW"
     #find first img with the matching tag
     image_html = soup.find_all('img', class_=image_class)
     #extract the src/link of the image
@@ -41,4 +40,4 @@ def send_data():
     image_url = get_image_url(animalName)
     return jsonify(result=image_url)
 
-# server.run()    run this command while testing, do not use in production
+server.run()   # run this command while testing, do not use in production

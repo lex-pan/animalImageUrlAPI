@@ -8,7 +8,6 @@ app.get('/', async (req, res) => {
     res.send('hello');
 });
 
-
 app.get('/image-source/:animal', async (req, res) => {
     const browser = await chromium.launch();
     const page = await browser.newPage();
